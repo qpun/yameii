@@ -1,11 +1,20 @@
 <html>
+	<title>IIiI</title>
+	<script type="text/javascript">
+	var titleText = document.title;
+	function titleMarquee() {
+ 	titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+ 	document.title = titleText;
+ 	setTimeout("titleMarquee()", 900); }
+	</script>
+	
 	<style>
 	.fix{position:fixed; bottom:0px; left:50%;}
 	body {font-family: 'Trebuchet MS', sans-serif;}
 	.club{position:fixed; bottom:40px; left:10px;}
 	.welcome{position:fixed; bottom:10px; left:10px;}
 	</style>
-	<body style="background-color:pink;">
+	<body onload="titleMarquee()" style="background-color:pink;">
 		<strong>
 			<h1>
 				<span class="welcome" style="color: #ff3b9a;">welcome to yameii online</span>
